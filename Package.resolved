@@ -1,0 +1,15 @@
+{
+  "originHash" : "987e0c2740d954ce2bdd10100e55b9f0d0571f7985ae84cf7393f9c8a6cf14b2",
+  "pins" : [
+    {
+      "identity" : "oepnv-wallet-plugin-api",
+      "kind" : "localSourceControl",
+      "location" : "/Users/jonas/Entwicklung/Xcode/OEPNV-Wallet-Plugin-API",
+      "state" : {
+        "branch" : "main",
+        "revision" : "43de11aaeb15420fe1cba4fa0e965098dec0f264"
+      }
+    }
+  ],
+  "version" : 3
+}
