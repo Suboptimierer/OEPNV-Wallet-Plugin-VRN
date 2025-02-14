@@ -1,13 +1,13 @@
 {
-  "originHash" : "d7ff005ccf37741ef3a73a38187f5a5574ddac78452c2552ae180ea211cd2f56",
+  "originHash" : "4a89d0f06a5c876c709ff7a649eddc72671f6266cb849a3feb8e6d2d4a207af8",
   "pins" : [
     {
       "identity" : "oepnv-wallet-plugin-api",
-      "kind" : "localSourceControl",
-      "location" : "/Users/jonas/Entwicklung/Xcode/OEPNV-Wallet-Plugin-API",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Suboptimierer/OEPNV-Wallet-Plugin-API.git",
       "state" : {
         "branch" : "main",
-        "revision" : "e3b3252c1e600a5e29f61773108e7c7d4e8ce5ea"
+        "revision" : "b2ca52d2eedaa232e607b40f0a0d8866e6a05d33"
       }
     }
   ],

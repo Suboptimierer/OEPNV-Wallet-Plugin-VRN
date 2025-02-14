@@ -8,7 +8,8 @@ let package = Package(
         .library(name: "OEPNVWalletPluginVRN", targets: ["OEPNVWalletPluginVRN"]),
     ],
     dependencies: [
-        .package(url: "../OEPNV-Wallet-Plugin-API", branch: "main"),
+        // TODO: Vor Veröffentlichung branch entfernen
+        .package(url: "https://github.com/Suboptimierer/OEPNV-Wallet-Plugin-API.git", branch: "main"),
     ],
     targets: [
         .target(name: "OEPNVWalletPluginVRN", dependencies: [
