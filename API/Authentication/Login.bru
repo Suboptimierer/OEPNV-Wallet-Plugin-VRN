@@ -1,0 +1,25 @@
+meta {
+  name: Login
+  type: http
+  seq: 1
+}
+
+post {
+  url: https://shop.myvrn.de/Identity/Authentication/Login
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "Name": "{{username}}",
+    "Password": "{{password}}",
+    "Client": "vrn",
+    "Organization": "vrn",
+    "RememberLogin": true
+  }
+}
+
+docs {
+  Die Authentifizierung läuft über Session-Cookies, der Wert des Response-Headers set-cookie muss also bei allen weiteren Requests mitgesendet werden.
+}
