@@ -4,6 +4,9 @@ import PackageDescription
 
 let package = Package(
     name: "OEPNV-Wallet-Plugin-VRN",
+    platforms: [
+        .macOS(.v13)
+    ],
     products: [
         .library(name: "OEPNVWalletPluginVRN", targets: ["OEPNVWalletPluginVRN"]),
     ],
