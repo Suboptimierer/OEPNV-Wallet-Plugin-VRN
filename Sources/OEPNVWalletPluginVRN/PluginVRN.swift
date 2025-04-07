@@ -59,7 +59,7 @@ public struct PluginVRN: OEPNVWalletPlugin {
             for ticket in listData.tickets {
                 let codeData = try await code(for: ticket.id, of: loginData.subjectId, auth: loginData.cookie, using: client)
                 pluginTickets.append(OEPNVWalletPluginTicket(
-                    id: ticket.id,
+                    id: String(ticket.id),
                     type: ticket.type,
                     validFrom: ticket.validFrom,
                     validUntil: ticket.validUntil,
