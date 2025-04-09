@@ -62,7 +62,7 @@ extension PluginVRN {
                 (name: "cookie", value: cookie)
             ],
             url: "https://shop.myvrn.de/TicketShop/Shop/ListOrdersV2",
-            body: listRequestBodyJSON,
+            body: listRequestBodyJSON
         )
         
         let clientResponse = try await client.send(request: clientRequest)

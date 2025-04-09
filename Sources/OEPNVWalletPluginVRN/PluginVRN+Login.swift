@@ -41,7 +41,7 @@ extension PluginVRN {
                 (name: "content-type", value: "application/json")
             ],
             url: "https://shop.myvrn.de/Identity/Authentication/Login",
-            body: loginRequestBodyJSON,
+            body: loginRequestBodyJSON
         )
         
         let clientResponse = try await client.send(request: clientRequest)

@@ -44,7 +44,7 @@ extension PluginVRN {
                 (name: "cookie", value: cookie)
             ],
             url: "https://shop.myvrn.de/TicketShop/Shop/QRCode",
-            body: codeRequestBodyJSON,
+            body: codeRequestBodyJSON
         )
         
         let clientResponse = try await client.send(request: clientRequest)

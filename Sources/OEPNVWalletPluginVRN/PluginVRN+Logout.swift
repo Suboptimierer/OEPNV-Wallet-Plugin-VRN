@@ -24,7 +24,7 @@ extension PluginVRN {
                 (name: "cookie", value: cookie)
             ],
             url: "https://shop.myvrn.de/Identity/Authentication/SignOut",
-            body: logoutRequestBodyJSON,
+            body: logoutRequestBodyJSON
         )
         
         let clientResponse = try await client.send(request: clientRequest)
