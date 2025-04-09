@@ -18,7 +18,7 @@ public struct PluginVRN: OEPNVWalletPlugin {
         authorURL: URL(string: "https://sannewald.com")!,
         associationName: "Verkehrsverbund Rhein-Neckar",
         associationAbbreviation: "VRN",
-        associationSpecialNotice: nil,
+        associationSpecialNotice: "Die VRN verwendet \"Benutzername\" und \"E-Mail-Adresse\" synonym. Trage als Benutzernamen also einfach deine E-Mail-Adresse ein.",
         associationAuthURLs: [
             URL(string: "https://shop.myvrn.de/app/login")!,
             URL(string: "https://apps.apple.com/de/app/myvrn/id405436716")!
