@@ -23,7 +23,7 @@ public struct PluginVRN: OEPNVWalletPlugin {
             URL(string: "https://shop.myvrn.de/app/login")!,
             URL(string: "https://apps.apple.com/de/app/myvrn/id405436716")!
         ],
-        associationAuthType: OEPNVWalletPluginAuthType.usernamePassword,
+        associationAuthType: .usernamePassword,
         supportedTickets: ["Deutschlandticket"]
     )
     
@@ -66,7 +66,7 @@ public struct PluginVRN: OEPNVWalletPlugin {
                     price: ticket.price,
                     holder: ticket.holder,
                     holderBirthday: ticket.holderBirthday,
-                    scanCode: codeData.scanCode
+                    scanCode: .base64AztecCodeWithISO88591Message(codeData.scanCode)
                 ))
             }
             
