@@ -86,7 +86,7 @@ extension PluginVRN {
                     guard let validFrom = dateFormatter.date(from: ticket.ValidFrom),
                           let validUntil = dateFormatter.date(from: ticket.ValidTo),
                           let birthday = dateFormatter.date(from: detail.Dob) else {
-                        throw OEPNVWalletPluginError.parsingFailed(description: "ValidFrom/ValidTo/Dob konnte nicht in Date umgewandelt werden.")
+                        throw OEPNVWalletPluginError.parsingFailed(description: "ValidFrom (\(ticket.ValidFrom)), ValidTo (\(ticket.ValidTo)), Dob (\(detail.Dob)) konnte nicht in Date umgewandelt werden.")
                     }
                     
                     let newTicket = ListData.Ticket(

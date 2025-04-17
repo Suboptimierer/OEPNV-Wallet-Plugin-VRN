@@ -61,12 +61,12 @@ extension PluginVRN {
         }
         
         guard let subjectId = loginResponseBodyJSON.SubjectId else {
-            throw OEPNVWalletPluginError.parsingFailed(description: "Keine Subject-ID vorhanden.")
+            throw OEPNVWalletPluginError.parsingFailed(description: "Keine Subject-ID vorhanden: \(String(data: loginResponseBody, encoding: .utf8) ?? "Fehler")")
         }
         
         guard let cookie = clientResponse.headers.first(where: {
             $0.name == "Set-Cookie" && $0.value.contains("mentz.cookie=")}) else {
-            throw OEPNVWalletPluginError.parsingFailed(description: "Kein Session-Cookie vorhanden.")
+            throw OEPNVWalletPluginError.parsingFailed(description: "Kein Session-Cookie vorhanden: \(String(data: loginResponseBody, encoding: .utf8) ?? "Fehler")")
         }
         
         return LoginData(subjectId: subjectId, cookie: cookie.value)

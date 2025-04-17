@@ -60,7 +60,7 @@ extension PluginVRN {
         }
         
         guard let scanCode = codeResponseBodyJSON.QrCode else {
-            throw OEPNVWalletPluginError.parsingFailed(description: "Kein Scan-Code vorhanden.")
+            throw OEPNVWalletPluginError.parsingFailed(description: "Kein Scan-Code vorhanden: \(String(data: codeResponseBody, encoding: .utf8) ?? "Fehler")")
         }
         
         return CodeData(scanCode: scanCode)
