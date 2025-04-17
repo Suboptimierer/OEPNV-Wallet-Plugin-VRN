@@ -47,7 +47,7 @@ extension PluginVRN {
         let clientResponse = try await client.send(request: clientRequest)
         
         guard let loginResponseBody = clientResponse.body else {
-            throw OEPNVWalletPluginError.parsingFailed(description: "Kein HTTP-Body vorhanden.")
+            throw OEPNVWalletPluginError.parsingFailed(description: "Kein HTTP-Body vorhanden: \(clientResponse.status), \(clientResponse.headers)")
         }
         
         let loginResponseBodyJSON = try JSONDecoder().decode(LoginResponseBody.self, from: loginResponseBody)
