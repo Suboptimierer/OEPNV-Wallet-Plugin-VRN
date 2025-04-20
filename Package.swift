@@ -17,7 +17,7 @@ let package = Package(
     targets: [
         .target(name: "OEPNVWalletPluginVRN", dependencies: [
             .product(name: "OEPNVWalletPluginAPI", package: "OEPNV-Wallet-Plugin-API")
-        ]),
+        ], resources: [ .process("Resources") ]),
         .testTarget(name: "OEPNVWalletPluginVRNTests", dependencies: ["OEPNVWalletPluginVRN"]),
     ]
 )

@@ -27,6 +27,18 @@ public struct PluginVRN: OEPNVWalletPlugin {
         supportedTickets: ["Deutschlandticket"]
     )
     
+    public let design = OEPNVWalletPluginDesign(
+        backgroundColor: .init(red: 255, green: 255, blue: 255),
+        headlineColor: .init(red: 1, green: 152, blue: 216),
+        textColor: .init(red: 1, green: 47, blue: 90),
+        associationIcon1x: try! Data(contentsOf: Bundle.module.url(forResource: "icon", withExtension: "png")!),
+        associationIcon2x: try! Data(contentsOf: Bundle.module.url(forResource: "icon@2x", withExtension: "png")!),
+        associationIcon3x: try! Data(contentsOf: Bundle.module.url(forResource: "icon@3x", withExtension: "png")!),
+        associationLogo1x: try! Data(contentsOf: Bundle.module.url(forResource: "logo", withExtension: "png")!),
+        associationLogo2x: try! Data(contentsOf: Bundle.module.url(forResource: "logo@2x", withExtension: "png")!),
+        associationLogo3x: try! Data(contentsOf: Bundle.module.url(forResource: "logo@3x", withExtension: "png")!)
+    )
+    
     public func testAuthentication(with credentials: OEPNVWalletPluginAPI.OEPNVWalletPluginAuthCredentials, using client: OEPNVWalletPluginAPI.OEPNVWalletClient) async throws {
         
         guard case let .usernamePassword(username, password) = credentials else {
