@@ -78,7 +78,7 @@ public struct PluginVRN: OEPNVWalletPlugin {
                     price: ticket.price,
                     holder: ticket.holder,
                     holderBirthday: ticket.holderBirthday,
-                    scanCode: .base64AztecCodeWithISO88591Message(codeData.scanCode)
+                    barcode: .base64AztecCode(codeData.aztecCode)
                 ))
             }
             

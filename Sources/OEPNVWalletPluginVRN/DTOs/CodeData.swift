@@ -8,5 +8,5 @@
 import Foundation
 
 struct CodeData {
-    let scanCode: String
+    let aztecCode: String
 }

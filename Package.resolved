@@ -1,5 +1,5 @@
 {
-  "originHash" : "d0ae7783cb770f8e977a02cc92d5cae3599d3d3e2ce2d1b4fff83690bc3d4259",
+  "originHash" : "db9ee5093b850c697dea02815bba31885a45249b869c03d5a495972e69bd56f4",
   "pins" : [
     {
       "identity" : "oepnv-wallet-plugin-api",
@@ -7,7 +7,7 @@
       "location" : "https://github.com/Suboptimierer/OEPNV-Wallet-Plugin-API.git",
       "state" : {
         "branch" : "main",
-        "revision" : "32ad5bf2b4d16714740134a763baca04d8c7e2ff"
+        "revision" : "10f4be06d7da3bd02aa3097533f28e628754bb5e"
       }
     }
   ],

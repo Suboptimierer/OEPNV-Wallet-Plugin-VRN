@@ -59,11 +59,11 @@ extension PluginVRN {
             throw OEPNVWalletPluginError.endpointFailed(description: "\(codeResponseBodyJSON.Error!.Subject): \(codeResponseBodyJSON.Error!.Message)")
         }
         
-        guard let scanCode = codeResponseBodyJSON.QrCode else {
-            throw OEPNVWalletPluginError.parsingFailed(description: "Kein Scan-Code vorhanden: \(String(data: codeResponseBody, encoding: .utf8) ?? "Fehler")")
+        guard let aztecCode = codeResponseBodyJSON.QrCode else {
+            throw OEPNVWalletPluginError.parsingFailed(description: "Kein Aztec-Code vorhanden: \(String(data: codeResponseBody, encoding: .utf8) ?? "Fehler")")
         }
         
-        return CodeData(scanCode: scanCode)
+        return CodeData(aztecCode: aztecCode)
         
     }
     
